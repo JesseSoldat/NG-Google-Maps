@@ -12,7 +12,6 @@ npm install --save moment
 npm install --save @types/moment
 
 npm install angular2-google-maps --save
-npm install --save @types/angular2-google-maps
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
