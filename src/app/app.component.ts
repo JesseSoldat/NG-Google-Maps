@@ -79,16 +79,16 @@ export class AppComponent {
   }
 
   showEdit(m: any, i: number){
-    console.log(m);
-    console.log(i);
+    // console.log(m);
+    // console.log(i);
    
     if(this.editLat === undefined && this.editLng === undefined){
-      console.log('not moved');
+      // console.log('not moved');
       this.editLat = m.lat;
       this.editLng = m.lng;
       this.editIndex = i;
     } else {
-      console.log('moved');
+      // console.log('moved');
       this.editIndex = i;
 
     }
@@ -98,9 +98,7 @@ export class AppComponent {
   }
 
   editMarker(m: any){
-     console.log(m)
-     // console.log(this.editInfo)
-
+     // console.log(m)
      let isDraggable;
 
       if(m.draggable === 'yes'){

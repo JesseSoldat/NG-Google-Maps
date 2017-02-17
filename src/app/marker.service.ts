@@ -57,7 +57,6 @@ export class MarkerService extends Init {
 				markers[i].draggable = marker.draggable;
 			}
 		}
-		//problem when I move and then change the name
 		localStorage.setItem('markers', JSON.stringify(markers));
 
 	}
