@@ -23,7 +23,7 @@ export class Init {
         }
       ];
       localStorage.setItem('markers', JSON.stringify(markers));
-      console.log('markers set.........');
+      // console.log('markers set.........');
       return;
 		} else {
 			console.log('Loading markers....');

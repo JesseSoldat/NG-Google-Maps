@@ -30,7 +30,7 @@ export class AppComponent {
   		lng: ['', Validators.required],
   		draggable: [false]
   	});
-    
+
     this.markers = this.markerService.getMarkers();
   }
 
@@ -53,9 +53,19 @@ export class AppComponent {
   		}
 
   		this.markers.push(newMarker);
+      this.markerService.addMarkers(newMarker);
   	} else {
   		alert('Please Fill In All Fields');
   	}
+  }
+
+  removeMarker(marker: marker){
+    for(let i = 0; i < this.markers.length; i++){
+      if(marker.lat === this.markers[i].lat && marker.lng === this.markers[i].lng){
+        this.markers.splice(i, 1);
+      }
+    }
+    this.markerService.removeMarker(marker);
   }
 
   clickedMarker(marker: marker, index: number){
