@@ -26,7 +26,7 @@ export class Init {
       // console.log('markers set.........');
       return;
 		} else {
-			console.log('Loading markers....');
+			// console.log('Loading markers....');
 		}
 	}
 }
