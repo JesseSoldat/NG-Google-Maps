@@ -22,8 +22,21 @@
 		<div class="map">
 			<!-- <div class="col-md-12"> DO NOT ADD CAUSES A PROBLEM-->
 				<!-- the component as the initial center of the map: -->
-				<sebm-google-map [latitude]="lat" [longitude]="lng">
-				  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+				<sebm-google-map 
+						[latitude]="lat" 
+						[longitude]="lng"
+						(mapClick)="mapClicked($event)">
+				  <sebm-google-map-marker
+				  	*ngFor="let m of markers; let i = index"
+				  	(markerClick)="clickedMarker(m, i)"
+				  	[latitude]="m.lat" 
+				  	[longitude]="m.lng">
+				  	<sebm-google-map-info-window>
+				  		<strong></strong>
+				  	</sebm-google-map-info-window>
+				  		{{m.name}}
+				  </sebm-google-map-marker>
+
 				</sebm-google-map>
 			<!-- </div> -->
 		</div>
